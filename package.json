@@ -19,7 +19,7 @@
     "format": "prettier --loglevel warn --write \"**/*.{js,md}\"",
     "prepublishOnly": "npm run build",
     "start": "http-server test",
-    "cypress": "cypress open",
+    "cypress": "cypress open --config-file ./cypress/cypress.config.js",
     "cypress:headless": "cypress run --browser chrome --headless",
     "test:e2e": "start-server-and-test start 8080 cypress",
     "test:e2e:ci": "start-server-and-test start 8080 cypress:headless"
@@ -30,7 +30,7 @@
   "dependencies": {},
   "peerDependencies": {
     "axe-core": "^3 || ^4",
-    "cypress": "^10" 
+    "cypress": "^10"
   },
   "devDependencies": {
     "@types/node": "^14.14.8",
